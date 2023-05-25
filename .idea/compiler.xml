@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ddd-petshop-lab" />
+        <module name="shared-kernel" />
+        <module name="order-management" />
+        <module name="shop-users" />
+      </profile>
+      <profile name="Annotation profile for ddd-petshop-lab" enabled="true">
+        <sourceOutputDir name="../user-management/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../user-management/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="product-catalog" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="user-management" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="order-management" options="-parameters" />
+      <module name="product-catalog" options="-parameters" />
+      <module name="shared-kernel" options="-parameters" />
+      <module name="shop-users" options="-parameters" />
+      <module name="user-management" options="-parameters" />
+    </option>
+  </component>
+</project>

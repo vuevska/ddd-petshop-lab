@@ -1,0 +1,42 @@
+version: "3"
+services:
+  emt-db-products:
+    image: "postgres"
+    container_name: "po_products"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=bazi22#velinov23$
+      - POSTGRES_DB=po_products
+    ports:
+      - "54322:5432"
+    volumes:
+      - postgres-data-products:/var/lib/postgresql/data
+
+  emt-db-orders:
+    image: "postgres"
+    container_name: "po_orders"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=bazi22#velinov23$
+      - POSTGRES_DB=po_orders
+    ports:
+      - "54323:5432"
+    volumes:
+      - postgres-data-orders:/var/lib/postgresql/data
+
+  emt-db-users:
+    image: "postgres"
+    container_name: "po_users"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=bazi22#velinov23$
+      - POSTGRES_DB=po_users
+    ports:
+      - "54324:5432"
+    volumes:
+      - postgres-data-users:/var/lib/postgresql/data
+
+volumes:
+  postgres-data-products:
+  postgres-data-orders:
+  postgres-data-users:
